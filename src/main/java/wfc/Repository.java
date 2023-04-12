@@ -1,8 +1,7 @@
+package wfc;
+
 import java.util.ArrayList;
 import java.util.List;
-import wfc.Customer;
-import wfc.FitnessType;
-import wfc.Lesson;
 
 public class Repository {
 
@@ -33,8 +32,8 @@ public class Repository {
   }
 
   public List<Lesson> getTimeTable() {
-    addLesson(new Lesson("A001", EIGHT_AM, SATURDAY, FitnessType.Aquacise));
-    addLesson(new Lesson("S001", EIGHT_AM, SATURDAY, FitnessType.Spin));
+    addLesson(new Lesson("A001",  EIGHT_AM, SATURDAY, FitnessType.Aquacise));
+    addLesson(new Lesson("S001",  EIGHT_AM, SATURDAY, FitnessType.Spin));
     addLesson(new Lesson("Y001", EIGHT_AM, SATURDAY, FitnessType.Yoga));
     addLesson(new Lesson("Z001", EIGHT_AM, SATURDAY, FitnessType.Zumba));
 
@@ -73,23 +72,6 @@ public class Repository {
     addLesson(new Lesson("Y008", FIVE_PM, SUNDAY, FitnessType.Yoga));
     addLesson(new Lesson("Z008", FIVE_PM, SUNDAY, FitnessType.Zumba));
     return this.lessons;
-  }
-
-  public void displayTimeTableHeading() {
-    System.out.printf("\n%-15s%-20s%-20s%-20s%-15s", "Lesson Code","Time", "Day", "Lesson", "Cost");
-  }
-
-  public void displayTimeTableDetails(Lesson lesson) {
-    System.out.printf("\n%-15s%-20s%-20s%-20s%-15s", lesson.getLessonCode(),lesson.getTime(), lesson.getDay(),
-        lesson.getFitnessType(), lesson.getCost());
-  }
-
-  public void displayMonthlyReportHeading() {
-    System.out.printf("\n%-15s%-20s%-15s", "Lesson Code","No. of Customers", "Rating Average");
-  }
-
-  public void displayMonthlyReportDetails(int size, String code, int rating) {
-    System.out.printf("\n%-15s%-20s%-15s", code,size, rating);
   }
 
 }

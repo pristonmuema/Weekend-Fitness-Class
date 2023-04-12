@@ -2,17 +2,26 @@ package wfc;
 
 public class Booking {
 
-  String lessonCode;
-  Rating rating;
-  String idNo;
-  FitnessType fitnessType;
-  double cost;
+  private String bookingId;
+  private String lessonCode;
+  private Rating rating;
+  private String idNo;
+  private FitnessType fitnessType;
+  private String review;
+  private double cost;
 
-  public Booking(String lessonCode, String idNo, FitnessType fitnessType) {
+  private String date;
+  private Status status;
+
+  public Booking(String bookingId, String lessonCode, String idNo, FitnessType fitnessType,
+      String date, Status status) {
+    this.bookingId = bookingId;
     this.lessonCode = lessonCode;
     this.idNo = idNo;
     this.fitnessType = fitnessType;
     this.cost = getFitnessType().getCost();
+    this.date = date;
+    this.status = status;
   }
 
   public double getCost() {
@@ -37,5 +46,29 @@ public class Booking {
 
   public FitnessType getFitnessType() {
     return fitnessType;
+  }
+
+  public String getReview() {
+    return review;
+  }
+
+  public void setReview(String review) {
+    this.review = review;
+  }
+
+  public Status getStatus() {
+    return status;
+  }
+
+  public void setStatus(Status status) {
+    this.status = status;
+  }
+
+  public String getBookingId() {
+    return bookingId;
+  }
+
+  public String getDate() {
+    return date;
   }
 }

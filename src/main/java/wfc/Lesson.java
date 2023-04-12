@@ -8,17 +8,18 @@ public class Lesson {
   private static final int LESSON_CAPACITY = 5;
   String lessonCode;
   String time;
-  String day;
+  String weekendDay;
   FitnessType fitnessType;
   List<Customer> customerList = new ArrayList<>();
   boolean isAttend;
 
   double cost;
 
-  public Lesson(String lessonCode, String time, String day, FitnessType fitnessType) {
+  public Lesson(String lessonCode, String time, String weekendDay,
+      FitnessType fitnessType) {
     this.lessonCode = lessonCode;
     this.time = time;
-    this.day = day;
+    this.weekendDay = weekendDay;
     this.fitnessType = fitnessType;
     this.cost = fitnessType.getCost();
   }
@@ -32,8 +33,8 @@ public class Lesson {
   }
 
 
-  public String getDay() {
-    return day;
+  public String getWeekendDay() {
+    return weekendDay;
   }
 
 

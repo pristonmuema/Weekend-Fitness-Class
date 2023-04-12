@@ -20,6 +20,10 @@ public class Customer {
     this.address = address;
   }
 
+  public Customer() {
+
+  }
+
   public String getIdNo() {
     return idNo;
   }
@@ -48,18 +52,4 @@ public class Customer {
     return lessons;
   }
 
-  public void setLessons(List<Lesson> lessons) {
-    this.lessons = lessons;
-  }
-
-  @Override
-  public String toString() {
-    return "Customer{" +
-        "idNo='" + idNo + '\'' +
-        ", name='" + name + '\'' +
-        ", phoneNo='" + phoneNo + '\'' +
-        ", address='" + address + '\'' +
-        ", lessons=" + lessons +
-        '}';
-  }
 }
